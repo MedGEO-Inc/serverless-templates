@@ -1,0 +1,15 @@
+custom:
+  appSync:
+    name: ${self:service}-${opt:stage}
+    authenticationType: API_KEY
+    apiKeys:
+      - name: Default
+        description: 'GraphQL Testing API_KEY'
+        expiresAfter: 90d
+    mappingTemplates:
+      ${file(./config/envs/${opt:stage}/serverless-appsync-mapping-templates-section.generated.yml):mappingTemplates}
+    serviceRole: ${param:APPSYNC_SERVICE_ROLE}
+    schema: models/graphql/schema.graphql
+    dataSources:
+      ${file(./config/envs/${opt:stage}/serverless-appsync-datasource.generated.yml):dataSources}
+

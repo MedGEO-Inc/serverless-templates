@@ -1,0 +1,263 @@
+org: medgeoinc
+app: medgeo
+service: mgat
+provider:
+  name: aws
+  profile: mgadmin
+  runtime: nodejs14.x
+  region: us-east-1
+  versionFunctions: false
+  iam:
+    role:
+      statements: ${file(./config/envs/${opt:stage}/serverless-vpc-provider.generated.yml):provider.iam.role.statements}
+  vpc: ${file(./config/envs/${opt:stage}/serverless-vpc-provider.generated.yml):provider.vpc}
+  timeout: 30
+  environment:
+    STAGE: ${opt:stage}
+    REGION: us-east-1
+    GRAPHQL_API:
+      "Fn::GetAtt": [GraphQlApi, GraphQLUrl]
+    #   API_KEY:
+    #     "Fn::GetAtt": [GraphQlApiKeygraphqlbe, ApiKey]
+    MONGO_USERNAME: ${param:MONGO_USERNAME}
+    MONGO_PASSWORD: ${param:MONGO_PASSWORD}
+    MONGO_HOST_NAME: ${param:MONGO_HOST_NAME}
+    MONGO_HOST_NAME_SRV: ${param:MONGO_HOST_NAME_SRV}
+    MONGO_PORT: ${param:MONGO_PORT}
+    MONGO_DB_NAME: ${param:MONGO_DB_NAME}
+    MONGO_SSL: ${param:MONGO_SSL}
+    GRAPHQL_SCHEMA_PATH: ${param:GRAPHQL_SCHEMA_PATH}
+    REDOX_VERIFICATION_TOKEN: ${param:REDOX_VERIFICATION_TOKEN}
+    REDOX_APPLICATION_NAME: ${param:REDOX_APPLICATION_NAME}
+    AUTH0_DOMAIN: ${param:AUTH0_DOMAIN}
+    AUTH0_CLIENT_ID: ${param:AUTH0_CLIENT_ID}
+    AUTH0_CLIENT_SECRET: ${param:AUTH0_CLIENT_SECRET}
+    AUTH0_AUDIENCE: ${param:AUTH0_AUDIENCE}
+    AUTH0_NAMESPACE: ${param:AUTH0_NAMESPACE}
+    AUTH0_JWT_CERT: ${param:AUTH0_JWT_CERT}
+    NODE_ENV: ${param:NODE_ENV}
+    BETTERID_URL: ${param:BETTERID_URL}
+    BETTERID_TOKEN: ${param:BETTERID_TOKEN}
+functions: # @NOT_IN_PROD excluded by custom.serverlessIfElse below
+  playgroundGraphql: #@NOT_IN_PROD
+    handler: routes/graphqlplayground.playgroundHandler
+    events:
+      - http:
+          path: graphqlplayground
+          method: get
+          cors: true
+  resetTestProcedures: #@NOT_IN_PROD
+    handler: routes/resets.resetTestProceduresHandler
+    events:
+      - http:
+          path: test/reset-procedures
+          method: get
+          integration: lambda
+          cors: true
+  status:
+    handler: routes/status.getStatus
+    events:
+      - http:
+          path: status
+          method: get
+          integration: lambda
+          cors: true
+  createUser:
+    handler: routes/users.createUser
+    events:
+      - http:
+          path: users
+          method: post
+          integration: lambda
+          cors: true
+  redoxRouter:
+    handler: routes/redox.getRouter
+    events:
+      - http:
+          path: redox/{facilityId}
+          method: post
+          integration: lambda
+          cors: true
+  addSurgeriesCron:
+    handler: jobs/addNewSurgeries.addSurgeriesCron
+    events:
+      - schedule: cron(0 6 ? * WED *)
+  queryGetStatus:
+    handler: routes/graphql.getStatus
+  authLambda:
+    name: authLambda-${opt:stage}
+    handler: routes/auth.authorizer
+  mutationAddCompanyToProcedure:
+    handler: routes/graphql.addCompanyToProcedure
+  mutationAddCompanyToProcedureByCompanyName:
+    handler: routes/graphql.addCompanyToProcedureByCompanyName
+  mutationAddFacility:
+    handler: routes/graphql.addFacility
+  mutationAddFacilityDepartment:
+    handler: routes/graphql.addFacilityDepartment
+  mutationAddPatient:
+    handler: routes/graphql.addPatient
+  mutationAddPatientNote:
+    handler: routes/graphql.addPatientNote
+  mutationAddProcedureAssetScans:
+    handler: routes/graphql.addProcedureAssetScans
+  mutationAddProcedureInstrumentTraysScans:
+    handler: routes/graphql.addProcedureInstrumentTraysScans
+  mutationAddProvider:
+    handler: routes/graphql.addProvider
+  mutationAddSurgery:
+    handler: routes/graphql.addSurgery
+  mutationAddSurgeryProcedure:
+    handler: routes/graphql.addSurgeryProcedure
+  mutationAddUser:
+    handler: routes/graphql.addUser
+  mutationCreateProductRepresentativeUser:
+    handler: routes/graphql.createProductRepresentativeUser
+  mutationCreateProviderUser:
+    handler: routes/graphql.createProviderUser
+  mutationCreateUser:
+    handler: routes/graphql.createUser
+  mutationDeleteFacility:
+    handler: routes/graphql.deleteFacility
+  mutationDeleteFacilityDepartment:
+    handler: routes/graphql.deleteFacilityDepartment
+  mutationDeletePatientNote:
+    handler: routes/graphql.deletePatientNote
+  mutationDeleteProcedureAssetGroup:
+    handler: routes/graphql.deleteProcedureAssetGroup
+  mutationDeleteProcedureAssetGroups:
+    handler: routes/graphql.deleteProcedureAssetGroups
+  mutationUpdateProcedureAssetGroupsCounts:
+    handler: routes/graphql.updateProcedureAssetGroupsCounts
+  mutationDeleteProcedureInstrumentTray:
+    handler: routes/graphql.deleteProcedureInstrumentTray
+  mutationDeleteProcedureAssetsByIds:
+    handler: routes/graphql.deleteProcedureAssetsByIds
+  mutationDeleteProvider:
+    handler: routes/graphql.deleteProvider
+  mutationDeleteSurgeryAssetGroup:
+    handler: routes/graphql.deleteSurgeryAssetGroup
+  mutationDeleteUser:
+    handler: routes/graphql.deleteUser
+  mutationEditFacility:
+    handler: routes/graphql.editFacility
+  mutationEditPatientNote:
+    handler: routes/graphql.editPatientNote
+  mutationEditUser:
+    handler: routes/graphql.editUser
+  mutationFacilityMutated:
+    handler: routes/graphql.facilityMutated
+  mutationProcedureMutated:
+    handler: routes/graphql.procedureMutated
+  mutationResetProcedureStatus:
+    handler: routes/graphql.resetProcedureStatus
+  mutationSetAssetsStatus:
+    handler: routes/graphql.setAssetsStatus
+  mutationSetProcedureStatus:
+    handler: routes/graphql.setProcedureStatus
+  queryGetAssetGroup:
+    handler: routes/graphql.getAssetGroup
+  queryGetCompanies:
+    handler: routes/graphql.getCompanies
+  queryGetCompany:
+    handler: routes/graphql.getCompany
+  queryGetCompanyByName:
+    handler: routes/graphql.getCompanyByName
+  queryGetFacilities:
+    handler: routes/graphql.getFacilities
+  queryGetFacility:
+    handler: routes/graphql.getFacility
+  queryGetFacilityByName:
+    handler: routes/graphql.getFacilityByName
+  queryGetFacilityByRedoxId:
+    handler: routes/graphql.getFacilityByRedoxId
+  queryGetPatient:
+    handler: routes/graphql.getPatient
+  queryGetPatientByEMHIdentifier:
+    handler: routes/graphql.getPatientByEMHIdentifier
+  queryGetPatientNote:
+    handler: routes/graphql.getPatientNote
+  queryGetPatientNotes:
+    handler: routes/graphql.getPatientNotes
+  queryGetPatientsByFacility:
+    handler: routes/graphql.getPatientsByFacility
+  queryGetPatients:
+    handler: routes/graphql.getPatients
+  queryGetProvider:
+    handler: routes/graphql.getProvider
+  queryGetProviderByEMHIdentifier:
+    handler: routes/graphql.getProviderByEMHIdentifier
+  queryGetProviders:
+    handler: routes/graphql.getProviders
+  queryGetSurgeries:
+    handler: routes/graphql.getSurgeries
+  queryGetSurgery:
+    handler: routes/graphql.getSurgery
+  queryGetSurgeryProcedure:
+    handler: routes/graphql.getSurgeryProcedure
+  queryGetUser:
+    handler: routes/graphql.getUser
+  queryGetUsers:
+    handler: routes/graphql.getUsers
+  queryGetUserByEmail:
+    handler: routes/graphql.getUserByEmail
+  queryGetProductReps:
+    handler: routes/graphql.getProductReps
+  mutationSendProcedureToRep:
+    handler: routes/graphql.sendProcedureToRep
+    timeout: 30
+  queryGetAccessLogs:
+    handler: routes/graphql.getAccessLogs
+  mutationSendProductRepInvite:
+    handler: routes/graphql.sendProductRepInvite
+    timeout: 30
+  mutationAddProductRepToProcedure:
+    handler: routes/graphql.addProductRepToProcedure
+  queryGetProcedures:
+    handler: routes/graphql.getProcedures
+  queryGetAssets:
+    handler: routes/graphql.getAssets
+  mutationResetUserPassword:
+    handler: routes/graphql.resetUserPassword
+  queryBetterIdLookup:
+    handler: routes/graphql.betterIdLookup
+  queryCharacterScan:
+    handler: routes/graphql.characterScan
+  mutationUploadImage:
+    handler: routes/graphql.uploadImaage
+  queryCompanySearch:
+    handler: routes/graphql.companySearch
+  queryGetImplantSites:
+    handler: routes/graphql.getImplantSites
+  mutationAddUndocumentedScan:
+    handler: routes/graphql.addUndocumentedScan
+  queryGetUndocumentedScans:
+    handler: routes/graphql.getUndocumentedScans
+  mutationBatchAddAssetsToProcedure:
+    handler: routes/graphql.batchAddAssetsToProcedure
+  mutationDeleteUndocumentedScans:
+    handler: routes/graphql.deleteUndocumentedScans
+  mutationDeleteConsumableAssetsByIds:
+    handler: routes/graphql.deleteConsumableAssetsByIds
+  queryGetProductCompanies:
+    handler: routes/graphql.getProductCompanies
+  mutationSendProductRegistrationEmails:
+    handler: routes/graphql.sendProductRegistrationEmails
+plugins:
+  - serverless-appsync-plugin
+  - serverless-prune-plugin
+  - serverless-plugin-ifelse
+resources:
+  Resources: ${file(./config/envs/${opt:stage}/serverless-vpc-resources.generated.yml):resources.Resources}
+custom:
+  config: ${file(./config/envs/${opt:stage}/serverless-vpc-config-vars.generated.yml):custom.config}
+  appSync: ${file(./config/envs/${opt:stage}/serverless-appsync.generated.yml):custom.appSync}
+  currentStage: ${opt:stage}
+  # == prod ==
+  # (NB: setting custom properties in serverlessIfElse below does not work)
+  # https://github.com/anantab/serverless-plugin-ifelse/issues/35
+  serverlessIfElse:
+    - If: '"${self:custom.currentStage}" == "prod"'
+      Exclude:
+        - functions.playgroundGraphql
+        - functions.resetTestProcedures

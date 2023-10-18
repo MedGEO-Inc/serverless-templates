@@ -1,0 +1,381 @@
+mappingTemplates:
+  - dataSource: Lambda_queryGetUser
+    type: Query
+    field: getUser
+    request: "../config/envs/testing/mapping-templates/graphql/query_getUser-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getUser-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetUserByEmail
+    type: Query
+    field: getUserByEmail
+    request: "../config/envs/testing/mapping-templates/graphql/query_getUserByEmail-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getUserByEmail-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetUsers
+    type: Query
+    field: getUsers
+    request: "../config/envs/testing/mapping-templates/graphql/query_getUsers-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getUsers-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetCompanies
+    type: Query
+    field: getCompanies
+    request: "../config/envs/testing/mapping-templates/graphql/query_getCompanies-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getCompanies-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetCompany
+    type: Query
+    field: getCompany
+    request: "../config/envs/testing/mapping-templates/graphql/query_getCompany-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getCompany-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetCompanyByName
+    type: Query
+    field: getCompanyByName
+    request: "../config/envs/testing/mapping-templates/graphql/query_getCompanyByName-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getCompanyByName-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetProductReps
+    type: Query
+    field: getProductReps
+    request: "../config/envs/testing/mapping-templates/graphql/query_getProductReps-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getProductReps-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryCharacterScan
+    type: Query
+    field: characterScan
+    request: "../config/envs/testing/mapping-templates/graphql/query_characterScan-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_characterScan-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetSurgeries
+    type: Query
+    field: getSurgeries
+    request: "../config/envs/testing/mapping-templates/graphql/query_getSurgeries-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getSurgeries-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetSurgery
+    type: Query
+    field: getSurgery
+    request: "../config/envs/testing/mapping-templates/graphql/query_getSurgery-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getSurgery-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetSurgeryProcedure
+    type: Query
+    field: getSurgeryProcedure
+    request: "../config/envs/testing/mapping-templates/graphql/query_getSurgeryProcedure-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getSurgeryProcedure-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetProcedures
+    type: Query
+    field: getProcedures
+    request: "../config/envs/testing/mapping-templates/graphql/query_getProcedures-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getProcedures-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetAssetGroup
+    type: Query
+    field: getAssetGroup
+    request: "../config/envs/testing/mapping-templates/graphql/query_getAssetGroup-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getAssetGroup-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetAssets
+    type: Query
+    field: getAssets
+    request: "../config/envs/testing/mapping-templates/graphql/query_getAssets-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getAssets-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetUndocumentedScans
+    type: Query
+    field: getUndocumentedScans
+    request: "../config/envs/testing/mapping-templates/graphql/query_getUndocumentedScans-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getUndocumentedScans-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetProductCompanies
+    type: Query
+    field: getProductCompanies
+    request: "../config/envs/testing/mapping-templates/graphql/query_getProductCompanies-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getProductCompanies-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetProvider
+    type: Query
+    field: getProvider
+    request: "../config/envs/testing/mapping-templates/graphql/query_getProvider-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getProvider-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetProviderByEMHIdentifier
+    type: Query
+    field: getProviderByEMHIdentifier
+    request: "../config/envs/testing/mapping-templates/graphql/query_getProviderByEMHIdentifier-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getProviderByEMHIdentifier-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetProviders
+    type: Query
+    field: getProviders
+    request: "../config/envs/testing/mapping-templates/graphql/query_getProviders-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getProviders-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryBetterIdLookup
+    type: Query
+    field: betterIdLookup
+    request: "../config/envs/testing/mapping-templates/graphql/query_betterIdLookup-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_betterIdLookup-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryCompanySearch
+    type: Query
+    field: companySearch
+    request: "../config/envs/testing/mapping-templates/graphql/query_companySearch-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_companySearch-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetImplantSites
+    type: Query
+    field: getImplantSites
+    request: "../config/envs/testing/mapping-templates/graphql/query_getImplantSites-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getImplantSites-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetStatus
+    type: Query
+    field: getStatus
+    request: "../config/envs/testing/mapping-templates/graphql/query_getStatus-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getStatus-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetFacility
+    type: Query
+    field: getFacility
+    request: "../config/envs/testing/mapping-templates/graphql/query_getFacility-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getFacility-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetFacilityByName
+    type: Query
+    field: getFacilityByName
+    request: "../config/envs/testing/mapping-templates/graphql/query_getFacilityByName-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getFacilityByName-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetFacilityByRedoxId
+    type: Query
+    field: getFacilityByRedoxId
+    request: "../config/envs/testing/mapping-templates/graphql/query_getFacilityByRedoxId-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getFacilityByRedoxId-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetFacilities
+    type: Query
+    field: getFacilities
+    request: "../config/envs/testing/mapping-templates/graphql/query_getFacilities-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getFacilities-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetPatient
+    type: Query
+    field: getPatient
+    request: "../config/envs/testing/mapping-templates/graphql/query_getPatient-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getPatient-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetPatientNote
+    type: Query
+    field: getPatientNote
+    request: "../config/envs/testing/mapping-templates/graphql/query_getPatientNote-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getPatientNote-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetPatientByEMHIdentifier
+    type: Query
+    field: getPatientByEMHIdentifier
+    request: "../config/envs/testing/mapping-templates/graphql/query_getPatientByEMHIdentifier-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getPatientByEMHIdentifier-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetPatientNotes
+    type: Query
+    field: getPatientNotes
+    request: "../config/envs/testing/mapping-templates/graphql/query_getPatientNotes-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getPatientNotes-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetPatients
+    type: Query
+    field: getPatients
+    request: "../config/envs/testing/mapping-templates/graphql/query_getPatients-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getPatients-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetPatientsByFacility
+    type: Query
+    field: getPatientsByFacility
+    request: "../config/envs/testing/mapping-templates/graphql/query_getPatientsByFacility-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getPatientsByFacility-response-mapping-template-generated.txt"
+  - dataSource: Lambda_queryGetAccessLogs
+    type: Query
+    field: getAccessLogs
+    request: "../config/envs/testing/mapping-templates/graphql/query_getAccessLogs-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/query_getAccessLogs-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationCreateUser
+    type: Mutation
+    field: createUser
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_createUser-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_createUser-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationCreateProductRepresentativeUser
+    type: Mutation
+    field: createProductRepresentativeUser
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_createProductRepresentativeUser-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_createProductRepresentativeUser-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationCreateProviderUser
+    type: Mutation
+    field: createProviderUser
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_createProviderUser-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_createProviderUser-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeleteUser
+    type: Mutation
+    field: deleteUser
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deleteUser-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deleteUser-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationEditUser
+    type: Mutation
+    field: editUser
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_editUser-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_editUser-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationResetUserPassword
+    type: Mutation
+    field: resetUserPassword
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_resetUserPassword-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_resetUserPassword-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationSendProductRepInvite
+    type: Mutation
+    field: sendProductRepInvite
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_sendProductRepInvite-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_sendProductRepInvite-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddSurgery
+    type: Mutation
+    field: addSurgery
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addSurgery-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addSurgery-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddSurgeryProcedure
+    type: Mutation
+    field: addSurgeryProcedure
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addSurgeryProcedure-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addSurgeryProcedure-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddProcedureAssetScans
+    type: Mutation
+    field: addProcedureAssetScans
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addProcedureAssetScans-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addProcedureAssetScans-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddProcedureInstrumentTraysScans
+    type: Mutation
+    field: addProcedureInstrumentTraysScans
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addProcedureInstrumentTraysScans-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addProcedureInstrumentTraysScans-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddCompanyToProcedure
+    type: Mutation
+    field: addCompanyToProcedure
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addCompanyToProcedure-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addCompanyToProcedure-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddCompanyToProcedureByCompanyName
+    type: Mutation
+    field: addCompanyToProcedureByCompanyName
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addCompanyToProcedureByCompanyName-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addCompanyToProcedureByCompanyName-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddProductRepToProcedure
+    type: Mutation
+    field: addProductRepToProcedure
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addProductRepToProcedure-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addProductRepToProcedure-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddUndocumentedScan
+    type: Mutation
+    field: addUndocumentedScan
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addUndocumentedScan-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addUndocumentedScan-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationBatchAddAssetsToProcedure
+    type: Mutation
+    field: batchAddAssetsToProcedure
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_batchAddAssetsToProcedure-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_batchAddAssetsToProcedure-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeleteUndocumentedScans
+    type: Mutation
+    field: deleteUndocumentedScans
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deleteUndocumentedScans-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deleteUndocumentedScans-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationUpdateProcedureAssetGroupsCounts
+    type: Mutation
+    field: updateProcedureAssetGroupsCounts
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_updateProcedureAssetGroupsCounts-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_updateProcedureAssetGroupsCounts-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeleteProcedureAssetGroup
+    type: Mutation
+    field: deleteProcedureAssetGroup
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deleteProcedureAssetGroup-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deleteProcedureAssetGroup-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeleteProcedureAssetGroups
+    type: Mutation
+    field: deleteProcedureAssetGroups
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deleteProcedureAssetGroups-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deleteProcedureAssetGroups-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeleteProcedureAssetsByIds
+    type: Mutation
+    field: deleteProcedureAssetsByIds
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deleteProcedureAssetsByIds-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deleteProcedureAssetsByIds-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeleteConsumableAssetsByIds
+    type: Mutation
+    field: deleteConsumableAssetsByIds
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deleteConsumableAssetsByIds-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deleteConsumableAssetsByIds-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeleteProcedureInstrumentTray
+    type: Mutation
+    field: deleteProcedureInstrumentTray
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deleteProcedureInstrumentTray-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deleteProcedureInstrumentTray-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationProcedureMutated
+    type: Mutation
+    field: procedureMutated
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_procedureMutated-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_procedureMutated-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationResetProcedureStatus
+    type: Mutation
+    field: resetProcedureStatus
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_resetProcedureStatus-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_resetProcedureStatus-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationSetAssetsStatus
+    type: Mutation
+    field: setAssetsStatus
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_setAssetsStatus-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_setAssetsStatus-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationSetProcedureStatus
+    type: Mutation
+    field: setProcedureStatus
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_setProcedureStatus-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_setProcedureStatus-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationSendProcedureToRep
+    type: Mutation
+    field: sendProcedureToRep
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_sendProcedureToRep-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_sendProcedureToRep-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationSendProductRegistrationEmails
+    type: Mutation
+    field: sendProductRegistrationEmails
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_sendProductRegistrationEmails-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_sendProductRegistrationEmails-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationUploadImage
+    type: Mutation
+    field: uploadImage
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_uploadImage-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_uploadImage-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddProvider
+    type: Mutation
+    field: addProvider
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addProvider-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addProvider-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeleteProvider
+    type: Mutation
+    field: deleteProvider
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deleteProvider-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deleteProvider-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddFacility
+    type: Mutation
+    field: addFacility
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addFacility-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addFacility-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddFacilityDepartment
+    type: Mutation
+    field: addFacilityDepartment
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addFacilityDepartment-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addFacilityDepartment-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeleteFacility
+    type: Mutation
+    field: deleteFacility
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deleteFacility-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deleteFacility-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeleteFacilityDepartment
+    type: Mutation
+    field: deleteFacilityDepartment
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deleteFacilityDepartment-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deleteFacilityDepartment-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationEditFacility
+    type: Mutation
+    field: editFacility
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_editFacility-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_editFacility-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationFacilityMutated
+    type: Mutation
+    field: facilityMutated
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_facilityMutated-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_facilityMutated-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddPatient
+    type: Mutation
+    field: addPatient
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addPatient-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addPatient-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationAddPatientNote
+    type: Mutation
+    field: addPatientNote
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_addPatientNote-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_addPatientNote-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationDeletePatientNote
+    type: Mutation
+    field: deletePatientNote
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_deletePatientNote-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_deletePatientNote-response-mapping-template-generated.txt"
+  - dataSource: Lambda_mutationEditPatientNote
+    type: Mutation
+    field: editPatientNote
+    request: "../config/envs/testing/mapping-templates/graphql/mutation_editPatientNote-request-mapping-template-generated.txt"
+    response: "../config/envs/testing/mapping-templates/graphql/mutation_editPatientNote-response-mapping-template-generated.txt"

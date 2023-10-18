@@ -1,0 +1,1445 @@
+dataSources:
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetUser
+    description: 'Lambda_queryGetUser DataSource'
+    config:
+      functionName: queryGetUser
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetUserLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetUserByEmail
+    description: 'Lambda_queryGetUserByEmail DataSource'
+    config:
+      functionName: queryGetUserByEmail
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetUserByEmailLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetUsers
+    description: 'Lambda_queryGetUsers DataSource'
+    config:
+      functionName: queryGetUsers
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetUsersLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetCompanies
+    description: 'Lambda_queryGetCompanies DataSource'
+    config:
+      functionName: queryGetCompanies
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetCompaniesLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetCompany
+    description: 'Lambda_queryGetCompany DataSource'
+    config:
+      functionName: queryGetCompany
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetCompanyLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetCompanyByName
+    description: 'Lambda_queryGetCompanyByName DataSource'
+    config:
+      functionName: queryGetCompanyByName
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetCompanyByNameLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetProductReps
+    description: 'Lambda_queryGetProductReps DataSource'
+    config:
+      functionName: queryGetProductReps
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetProductRepsLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryCharacterScan
+    description: 'Lambda_queryCharacterScan DataSource'
+    config:
+      functionName: queryCharacterScan
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryCharacterScanLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetSurgeries
+    description: 'Lambda_queryGetSurgeries DataSource'
+    config:
+      functionName: queryGetSurgeries
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetSurgeriesLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetSurgery
+    description: 'Lambda_queryGetSurgery DataSource'
+    config:
+      functionName: queryGetSurgery
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetSurgeryLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetSurgeryProcedure
+    description: 'Lambda_queryGetSurgeryProcedure DataSource'
+    config:
+      functionName: queryGetSurgeryProcedure
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetSurgeryProcedureLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetProcedures
+    description: 'Lambda_queryGetProcedures DataSource'
+    config:
+      functionName: queryGetProcedures
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetProceduresLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetAssetGroup
+    description: 'Lambda_queryGetAssetGroup DataSource'
+    config:
+      functionName: queryGetAssetGroup
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetAssetGroupLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetAssets
+    description: 'Lambda_queryGetAssets DataSource'
+    config:
+      functionName: queryGetAssets
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetAssetsLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetUndocumentedScans
+    description: 'Lambda_queryGetUndocumentedScans DataSource'
+    config:
+      functionName: queryGetUndocumentedScans
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetUndocumentedScansLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetProductCompanies
+    description: 'Lambda_queryGetProductCompanies DataSource'
+    config:
+      functionName: queryGetProductCompanies
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetProductCompaniesLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetProvider
+    description: 'Lambda_queryGetProvider DataSource'
+    config:
+      functionName: queryGetProvider
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetProviderLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetProviderByEMHIdentifier
+    description: 'Lambda_queryGetProviderByEMHIdentifier DataSource'
+    config:
+      functionName: queryGetProviderByEMHIdentifier
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetProviderByEMHIdentifierLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetProviders
+    description: 'Lambda_queryGetProviders DataSource'
+    config:
+      functionName: queryGetProviders
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetProvidersLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryBetterIdLookup
+    description: 'Lambda_queryBetterIdLookup DataSource'
+    config:
+      functionName: queryBetterIdLookup
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryBetterIdLookupLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryCompanySearch
+    description: 'Lambda_queryCompanySearch DataSource'
+    config:
+      functionName: queryCompanySearch
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryCompanySearchLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetImplantSites
+    description: 'Lambda_queryGetImplantSites DataSource'
+    config:
+      functionName: queryGetImplantSites
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetImplantSitesLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetStatus
+    description: 'Lambda_queryGetStatus DataSource'
+    config:
+      functionName: queryGetStatus
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetStatusLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetFacility
+    description: 'Lambda_queryGetFacility DataSource'
+    config:
+      functionName: queryGetFacility
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetFacilityLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetFacilityByName
+    description: 'Lambda_queryGetFacilityByName DataSource'
+    config:
+      functionName: queryGetFacilityByName
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetFacilityByNameLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetFacilityByRedoxId
+    description: 'Lambda_queryGetFacilityByRedoxId DataSource'
+    config:
+      functionName: queryGetFacilityByRedoxId
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetFacilityByRedoxIdLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetFacilities
+    description: 'Lambda_queryGetFacilities DataSource'
+    config:
+      functionName: queryGetFacilities
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetFacilitiesLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetPatient
+    description: 'Lambda_queryGetPatient DataSource'
+    config:
+      functionName: queryGetPatient
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetPatientLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetPatientNote
+    description: 'Lambda_queryGetPatientNote DataSource'
+    config:
+      functionName: queryGetPatientNote
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetPatientNoteLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetPatientByEMHIdentifier
+    description: 'Lambda_queryGetPatientByEMHIdentifier DataSource'
+    config:
+      functionName: queryGetPatientByEMHIdentifier
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetPatientByEMHIdentifierLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetPatientNotes
+    description: 'Lambda_queryGetPatientNotes DataSource'
+    config:
+      functionName: queryGetPatientNotes
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetPatientNotesLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetPatients
+    description: 'Lambda_queryGetPatients DataSource'
+    config:
+      functionName: queryGetPatients
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetPatientsLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetPatientsByFacility
+    description: 'Lambda_queryGetPatientsByFacility DataSource'
+    config:
+      functionName: queryGetPatientsByFacility
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetPatientsByFacilityLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_queryGetAccessLogs
+    description: 'Lambda_queryGetAccessLogs DataSource'
+    config:
+      functionName: queryGetAccessLogs
+      lambdaFunctionArn:
+        "Fn::GetAtt": [QueryGetAccessLogsLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationCreateUser
+    description: 'Lambda_mutationCreateUser DataSource'
+    config:
+      functionName: mutationCreateUser
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationCreateUserLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationCreateProductRepresentativeUser
+    description: 'Lambda_mutationCreateProductRepresentativeUser DataSource'
+    config:
+      functionName: mutationCreateProductRepresentativeUser
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationCreateProductRepresentativeUserLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationCreateProviderUser
+    description: 'Lambda_mutationCreateProviderUser DataSource'
+    config:
+      functionName: mutationCreateProviderUser
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationCreateProviderUserLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeleteUser
+    description: 'Lambda_mutationDeleteUser DataSource'
+    config:
+      functionName: mutationDeleteUser
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeleteUserLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationEditUser
+    description: 'Lambda_mutationEditUser DataSource'
+    config:
+      functionName: mutationEditUser
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationEditUserLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationResetUserPassword
+    description: 'Lambda_mutationResetUserPassword DataSource'
+    config:
+      functionName: mutationResetUserPassword
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationResetUserPasswordLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationSendProductRepInvite
+    description: 'Lambda_mutationSendProductRepInvite DataSource'
+    config:
+      functionName: mutationSendProductRepInvite
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationSendProductRepInviteLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddSurgery
+    description: 'Lambda_mutationAddSurgery DataSource'
+    config:
+      functionName: mutationAddSurgery
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddSurgeryLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddSurgeryProcedure
+    description: 'Lambda_mutationAddSurgeryProcedure DataSource'
+    config:
+      functionName: mutationAddSurgeryProcedure
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddSurgeryProcedureLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddProcedureAssetScans
+    description: 'Lambda_mutationAddProcedureAssetScans DataSource'
+    config:
+      functionName: mutationAddProcedureAssetScans
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddProcedureAssetScansLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddProcedureInstrumentTraysScans
+    description: 'Lambda_mutationAddProcedureInstrumentTraysScans DataSource'
+    config:
+      functionName: mutationAddProcedureInstrumentTraysScans
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddProcedureInstrumentTraysScansLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddCompanyToProcedure
+    description: 'Lambda_mutationAddCompanyToProcedure DataSource'
+    config:
+      functionName: mutationAddCompanyToProcedure
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddCompanyToProcedureLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddCompanyToProcedureByCompanyName
+    description: 'Lambda_mutationAddCompanyToProcedureByCompanyName DataSource'
+    config:
+      functionName: mutationAddCompanyToProcedureByCompanyName
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddCompanyToProcedureByCompanyNameLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddProductRepToProcedure
+    description: 'Lambda_mutationAddProductRepToProcedure DataSource'
+    config:
+      functionName: mutationAddProductRepToProcedure
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddProductRepToProcedureLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddUndocumentedScan
+    description: 'Lambda_mutationAddUndocumentedScan DataSource'
+    config:
+      functionName: mutationAddUndocumentedScan
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddUndocumentedScanLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationBatchAddAssetsToProcedure
+    description: 'Lambda_mutationBatchAddAssetsToProcedure DataSource'
+    config:
+      functionName: mutationBatchAddAssetsToProcedure
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationBatchAddAssetsToProcedureLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeleteUndocumentedScans
+    description: 'Lambda_mutationDeleteUndocumentedScans DataSource'
+    config:
+      functionName: mutationDeleteUndocumentedScans
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeleteUndocumentedScansLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationUpdateProcedureAssetGroupsCounts
+    description: 'Lambda_mutationUpdateProcedureAssetGroupsCounts DataSource'
+    config:
+      functionName: mutationUpdateProcedureAssetGroupsCounts
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationUpdateProcedureAssetGroupsCountsLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeleteProcedureAssetGroup
+    description: 'Lambda_mutationDeleteProcedureAssetGroup DataSource'
+    config:
+      functionName: mutationDeleteProcedureAssetGroup
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeleteProcedureAssetGroupLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeleteProcedureAssetGroups
+    description: 'Lambda_mutationDeleteProcedureAssetGroups DataSource'
+    config:
+      functionName: mutationDeleteProcedureAssetGroups
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeleteProcedureAssetGroupsLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeleteProcedureAssetsByIds
+    description: 'Lambda_mutationDeleteProcedureAssetsByIds DataSource'
+    config:
+      functionName: mutationDeleteProcedureAssetsByIds
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeleteProcedureAssetsByIdsLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeleteConsumableAssetsByIds
+    description: 'Lambda_mutationDeleteConsumableAssetsByIds DataSource'
+    config:
+      functionName: mutationDeleteConsumableAssetsByIds
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeleteConsumableAssetsByIdsLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeleteProcedureInstrumentTray
+    description: 'Lambda_mutationDeleteProcedureInstrumentTray DataSource'
+    config:
+      functionName: mutationDeleteProcedureInstrumentTray
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeleteProcedureInstrumentTrayLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationProcedureMutated
+    description: 'Lambda_mutationProcedureMutated DataSource'
+    config:
+      functionName: mutationProcedureMutated
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationProcedureMutatedLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationResetProcedureStatus
+    description: 'Lambda_mutationResetProcedureStatus DataSource'
+    config:
+      functionName: mutationResetProcedureStatus
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationResetProcedureStatusLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationSetAssetsStatus
+    description: 'Lambda_mutationSetAssetsStatus DataSource'
+    config:
+      functionName: mutationSetAssetsStatus
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationSetAssetsStatusLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationSetProcedureStatus
+    description: 'Lambda_mutationSetProcedureStatus DataSource'
+    config:
+      functionName: mutationSetProcedureStatus
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationSetProcedureStatusLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationSendProcedureToRep
+    description: 'Lambda_mutationSendProcedureToRep DataSource'
+    config:
+      functionName: mutationSendProcedureToRep
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationSendProcedureToRepLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationSendProductRegistrationEmails
+    description: 'Lambda_mutationSendProductRegistrationEmails DataSource'
+    config:
+      functionName: mutationSendProductRegistrationEmails
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationSendProductRegistrationEmailsLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationUploadImage
+    description: 'Lambda_mutationUploadImage DataSource'
+    config:
+      functionName: mutationUploadImage
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationUploadImageLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddProvider
+    description: 'Lambda_mutationAddProvider DataSource'
+    config:
+      functionName: mutationAddProvider
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddProviderLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeleteProvider
+    description: 'Lambda_mutationDeleteProvider DataSource'
+    config:
+      functionName: mutationDeleteProvider
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeleteProviderLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddFacility
+    description: 'Lambda_mutationAddFacility DataSource'
+    config:
+      functionName: mutationAddFacility
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddFacilityLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddFacilityDepartment
+    description: 'Lambda_mutationAddFacilityDepartment DataSource'
+    config:
+      functionName: mutationAddFacilityDepartment
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddFacilityDepartmentLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeleteFacility
+    description: 'Lambda_mutationDeleteFacility DataSource'
+    config:
+      functionName: mutationDeleteFacility
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeleteFacilityLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeleteFacilityDepartment
+    description: 'Lambda_mutationDeleteFacilityDepartment DataSource'
+    config:
+      functionName: mutationDeleteFacilityDepartment
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeleteFacilityDepartmentLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationEditFacility
+    description: 'Lambda_mutationEditFacility DataSource'
+    config:
+      functionName: mutationEditFacility
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationEditFacilityLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationFacilityMutated
+    description: 'Lambda_mutationFacilityMutated DataSource'
+    config:
+      functionName: mutationFacilityMutated
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationFacilityMutatedLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddPatient
+    description: 'Lambda_mutationAddPatient DataSource'
+    config:
+      functionName: mutationAddPatient
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddPatientLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationAddPatientNote
+    description: 'Lambda_mutationAddPatientNote DataSource'
+    config:
+      functionName: mutationAddPatientNote
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationAddPatientNoteLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationDeletePatientNote
+    description: 'Lambda_mutationDeletePatientNote DataSource'
+    config:
+      functionName: mutationDeletePatientNote
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationDeletePatientNoteLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
+  - type: AWS_LAMBDA
+    name: Lambda_mutationEditPatientNote
+    description: 'Lambda_mutationEditPatientNote DataSource'
+    config:
+      functionName: mutationEditPatientNote
+      lambdaFunctionArn:
+        "Fn::GetAtt": [MutationEditPatientNoteLambdaFunction, Arn]
+      serviceRoleArn:
+        "Fn::GetAtt": [AppSyncLambdaServiceRoleTesting, Arn]
+      iamRoleStatements:
+        - Effect: "Allow"
+          Action:
+            - "lambda:invokeFunction"
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource:
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql"
+            - "arn:aws:lambda:{REGION}:{ACCOUNT_ID}:graphql:*"
